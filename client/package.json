@@ -1,0 +1,34 @@
+{
+  "name": "axla-dm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "stylus": "stylus app/styles/main.styl -o static/app.css",
+    "stylus:w": "stylus -w app/styles/main.styl -o static/app.css",
+    "lite": "lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" \"npm run stylus:w\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "express": "^4.13.3",
+    "font-awesome": "^4.5.0",
+    "game-server-query": "^1.0.8",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "serve-static": "^1.10.0",
+    "systemjs": "^0.19.6",
+    "zone.js": "0.5.10"
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0",
+    "lite-server": "^1.3.1",
+    "typescript": "^1.7.3"
+  }
+}

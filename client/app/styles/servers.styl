@@ -1,0 +1,82 @@
+
+.server-section
+  border-bottom 2px solid #f9f9f9
+   
+  h2 
+    margin-top 20px
+    padding 20px 20px
+    font-weight 300
+    background #f9f9f9
+    color orange
+ 
+csgo-server 
+  display block
+  padding 10px
+  min-height 72px
+  border-bottom 1px solid rgba(128,128,128,0.24)
+  transition all .5s ease-out, all .1s ease-in
+  position relative
+  &:hover
+    box-shadow 4px 4px 12px rgba(0,0,0,.17), -4px -4px 12px rgba(0,0,0,0.1)
+
+  .csgo-server
+    &.loading
+      .refresh-icon
+        cursor not-allowed
+      .info
+        p
+          color #ccc
+        .server-name
+          color #ccc
+
+    .info
+      .server-name
+        text-decoration none
+        font-weight bold
+        font-size 20px
+        color #3f5a54
+
+        &:hover
+          border-bottom 1px solid #3f5a54
+
+      .players
+        &.full
+          color #e30c0c
+        .current
+          font-size 80%
+      p
+        padding 0
+        margin 0
+        color lighten(#3f5a54, 30%)
+
+        .caption
+          font-weight bold
+          display: inline-block
+          width 60px
+
+    .refresh-icon
+      position: absolute
+      right 20px
+      color orange
+      font-size 24px
+      top 50%
+      margin-top -12px
+
+ .password-input-container
+   max-width 0px
+   overflow hidden
+   display inline-block
+   height 24px;
+   position relative
+   top 6px
+   transition all 1s ease-in-out
+
+   &.visible
+    max-width 960px
+
+   .password-input
+     border none
+     border-bottom 1px solid #c0c0c0
+     font-family Roboto, sans-serif
+     font-size 16px
+     padding 2px 12px
