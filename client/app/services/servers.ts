@@ -12,10 +12,10 @@ export default class Servers {
   
   getServers(type: string) : Observable<string[]> {
     console.log("servers gotten?")
-    return this.http.get(`http://localhost:1337/api/servers/${type}`).map((v) => v.json()).map(x => <string[]> x);
+    return this.http.get(`/api/servers/${type}`).map((v) => v.json()).map(x => <string[]> x);
   }
   
   getServer(type: string, host: string) {
-    return this.http.get(`http://localhost:1337/api/servers/${type}/${host}`).map(x => x.json());
+    return this.http.get(`/api/servers/${type}/${host}`).map(x => x.json());
   }
 }

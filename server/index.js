@@ -7,11 +7,10 @@ var serveStatic = require('serve-static');
 var app = express(); 
 
 app.use(cors());
+app.use(serveStatic('../client', { index: 'index.html' }));
+
 
 var getServerInfo = (type, host, port, cb) => Gamedig.query({type: type, host: host, port: port}, cb);
-
-
-app.use(serveStatic('../app', { index: 'index.html' }));
 
 app.get('/api/servers/csgo/:ip', (req, res) => {
   var hostport = req.params.ip.split(':');
